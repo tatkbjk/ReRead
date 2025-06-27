@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">RereadProject</string>
+    <string name="titlePickedForYou">Picked for You</string>
+    <string name="titleBestSellers">Best Sellers</string>
+    <string name="btnAddToCart">Add to Cart</string>
+    <string name="btnBuyNow">Buy Now</string>
+    <string name="titleRatingsAndReviews">Ratings &amp; Reviews</string>
+    <string name="titleShowMore">Show more</string>
+    <string name="titleShowLess">Show less</string>
+    <string name="titleAboutUs">About Us</string>
+    <string name="titleSortPrice">Price</string>
+    <string name="titleGenre">Genre</string>
+
+
+    <string name="Title_login">Login</string>
+    <string name="title_register">Register</string>
+    <string name="title_no_account">Don\'t have an account?</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="title_login">Login</string>
+    <string name="title_email_phone">Email/Phone Number:</string>
+    <string name="title_password">Password:</string>
+    <string name="title_save_login">Save login information</string>
+    <string name="title_create_now"><u>Create Now!</u></string>
+    <string name="title_full_name">Full Name:</string>
+    <string name="hint_full_name">Bui Thi Ngoc Chau</string>
+    <string name="title_confirm_password">Confirm Password:</string>
+    <string name="title_have_account">Already have an account?</string>
+    <string name="title_login_now"><u>Login Now</u></string>
+    <string name="title_email">Email:</string>
+    <string name="title_phone">Phone Number:</string>
+    <string name="title_create">Create</string>
+    <string name="title_re_enter_password">Re-enter password</string>
+    <string name="hint_mail">you@example.com</string>
+    <string name="hint_phone">0123456789</string>
+    <string name="title_connect_with">Connect with</string>
+    <string name="hint_password">Password</string>
+    <string name="title_send_link">Send Link</string>
+    <string name="title_type_to_reset">Enter your email to receive a reset link:</string>
+    <string name="title_reset_password">Reset Password</string>
+    <string name="title_new_password">New Password:</string>
+    <string name="hint_new_password">New password</string>
+    <string name="title_submit">Submit</string>
+    <string name="title_enter_new_password">Enter your new password:</string>
+    <string name="title_re_enter_new_password">Re-enter New Password:</string>
+    <string name="title_old_password">Old Password:</string>
+    <string name="hint_old_password">Old password</string>
+    <string name="title_change_password">Change Password</string>
+
+    <string name="title_billing_details">Billing details</string>
+    <string name="title_phone_number">Phone Number:</string>
+    <string name="title_address">Address:</string>
+    <string name="title_delivery_mode">Delivery Mode:</string>
+    <string name="title_self_pick">Self-pick</string>
+    <string name="title_doordash">DoorDash</string>
+    <string name="title_payment_method">Payment Method</string>
+    <string name="title_cod">COD</string>
+    <string name="tile_internet_banking">Internet Banking</string>
+    <string name="title_product">Product</string>
+    <string name="title_subtotal">Subtotal</string>
+    <string name="title_delivery_fee">Delivery Fee</string>
+    <string name="title_voucher">Voucher</string>
+    <string name="title_type_voucher">Type Your Voucher</string>
+    <string name="title_total">Total</string>
+    <string name="title_btn_place_order">Place Order</string>
+    <string name="title_total_1">Total:</string>
+    <string name="title_saved">Saved:</string>
+    <string name="title_my_wishlist_name">My Wishlish Name</string>
+    <string name="title_my_profile">My Profile</string>
+    <string name="title_select_all">Select All</string>
+    <string name="title_add_too_cart">Add too Cart</string>
+    <string name="title_btn_create_wishlist">Create a Wishlist</string>
+    <string name="title_wishlish_you_may_like">Wishlist you may like</string>
+    <string name="title_shipping_fee">Shipping fee</string>
+    <string name="title_go_to_checkout">Go to Checkout</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_gender">Gender</string>
+    <string name="title_dob">Date of Birth</string>
+    <string name="title_order_history">Order History</string>
+    <string name="title_interested_events">Interested Events</string>
+    <string name="title_top30_read">Top 30 Must Read In 2025</string>
+    <string name="title_quick_payment_via_qr_code">Quick Payment Via QR Code</string>
+    <string name="title_or">Or</string>
+    <string name="title_bank_name">Bank Name:</string>
+    <string name="title_account_name">Account Name:</string>
+    <string name="title_account_number">Account Number:</string>
+    <string name="title_amount">Amount:</string>
+    <string name="title_price">Price</string>
+
+
+    <string name="titleProductAuthor">Author:</string>
+    <string name="titleProductPublisher">Publisher:</string>
+    <string name="txtProductLanguage">Language:</string>
+
+
+    <string name="titleProductQuality">Quality:</string>
+    <string name="titleProductQuantity">Quantity:</string>
+    <string name="titleProductInStock">In stock:</string>
+
+    <string name="title_check_out">Check out</string>
+    <string name="title_title_change_password">Change Password</string>
+    <string name="title_btn_update">Update</string>
+    <string name="selected_voucher">Voucher applied</string>
+    <string name="no_voucher">No voucher applied</string>
+    <string name="product_genre">"Genre: "</string>
+
+</resources>
