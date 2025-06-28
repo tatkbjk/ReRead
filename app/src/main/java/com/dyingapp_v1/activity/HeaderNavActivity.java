@@ -76,7 +76,7 @@ public class HeaderNavActivity extends Fragment {
             Intent intent = new Intent(getActivity(), ManageAccountActivity.class);
             startActivity(intent);
         } else if (id == R.id.author) {
-            Intent intent = new Intent(getActivity(), ManageAccountActivity.class);
+            Intent intent = new Intent(getActivity(), AuthorActivity.class);
             startActivity(intent);
         }
 

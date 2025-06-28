@@ -102,5 +102,8 @@
     <string name="selected_voucher">Voucher applied</string>
     <string name="no_voucher">No voucher applied</string>
     <string name="product_genre">"Genre: "</string>
+    <string name="title_author">Authors</string>
+    <string name="title_genre">Genre</string>
+    <string name="btn_show_more">Show More</string>
 
 </resources>
