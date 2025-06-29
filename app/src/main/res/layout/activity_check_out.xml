@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".activity.CheckOutActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0A7B41"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="32dp">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="89dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    app:srcCompat="@drawable/ic_logo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <!-- Icon bên trái -->
+                    <ImageView
+                        android:id="@+id/btn_back"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="Back"
+                        android:src="@drawable/ic_arrow_back" />
+
+                    <!-- View trống để đẩy icon bên phải về cuối -->
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/title_check_out"
+                        android:textColor="#ffffff" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <!-- Icon bên phải -->
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_cart_white" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar2"
+            app:layout_constraintBottom_toTopOf="@id/checkoutLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp">
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/title_full_name"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/edtFullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_password_field"
+                    android:hint="Erik Le"
+                    android:inputType="text"
+                    android:paddingStart="12dp"
+                    android:textColorHint="#808080"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/title_phone_number"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/edtPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_password_field"
+                    android:hint="09343545489"
+                    android:inputType="text"
+                    android:paddingStart="12dp"
+                    android:textColorHint="#808080"
+                    android:textSize="15dp" />
+
+                <!--address-->
+                <TextView
+                    android:id="@+id/textView53"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/title_address"
+                    android:textSize="13dp" />
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_password_field"
+                    android:hint="12 lê văn việt, Thủ Đức"
+                    android:textColorHint="#808080"
+                    android:textSize="15dp"
+                    android:inputType="text"
+                    android:paddingStart="12dp"/>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingTop="5dp"
+                    android:text="@string/title_delivery_mode"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radSelfPick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/radio_button_checked_color"
+                        android:checked="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/title_self_pick"
+                        android:textColor="#391319"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/radDoorDash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/radio_button_checked_color"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/title_doordash"
+                        android:textColor="#391319"
+                        android:textSize="13sp" />
+                </RadioGroup>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView7"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/poppins_bold"-->
+<!--                    android:text="@string/title_payment_method"-->
+<!--                    android:textSize="13sp" />-->
+
+<!--                <RadioGroup-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/radCOD"-->
+<!--                        android:layout_width="141dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:buttonTint="@color/radio_button_checked_color"-->
+<!--                        android:checked="true"-->
+<!--                        android:fontFamily="@font/poppins"-->
+<!--                        android:text="@string/title_cod"-->
+<!--                        android:textColor="#391319"-->
+<!--                        android:textSize="13sp" />-->
+
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/radBanking"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:buttonTint="@color/radio_button_checked_color"-->
+<!--                        android:fontFamily="@font/poppins"-->
+<!--                        android:text="@string/tile_internet_banking"-->
+<!--                        android:textColor="#391319"-->
+<!--                        android:textSize="13sp" />-->
+<!--                </RadioGroup>-->
+
+<!--                <ListView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:nestedScrollingEnabled="true" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+    <!--thanh toán-->
+    <LinearLayout
+        android:id="@+id/checkoutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical"
+        android:paddingStart="32dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/selected_voucher"
+            android:textSize="15dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/card_voucher"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtVoucherApplied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="@string/no_voucher"
+                android:inputType="text"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_subtotal"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:id="@+id/txtSubtotal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.500.00đ"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/title_shipping_fee" />
+
+                <TextView
+                    android:id="@+id/txtShipFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/title_voucher" />
+
+                <TextView
+                    android:id="@+id/txtVoucher2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.500.00đ"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"/>
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#CCCCCC"
+                android:layout_marginBottom="5dp"/>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/title_total_1" />
+
+                <TextView
+                    android:id="@+id/txtTotal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.500.00đ"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"/>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="211dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#0A7B41"
+            android:text="@string/title_btn_place_order"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="0dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

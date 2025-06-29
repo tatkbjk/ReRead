@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ListWishlistActivity"
+    android:background="#F2EDDA">
+
+    <LinearLayout
+        android:id="@+id/layoutToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:background="#0A7B41">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="32dp">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="89dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    app:srcCompat="@drawable/ic_logo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp">
+
+                    <!-- Icon bên trái -->
+                    <ImageView
+                        android:id="@+id/btn_back"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+
+                        app:srcCompat="@drawable/ic_back" />
+
+                    <!-- View trống để đẩy icon bên phải về cuối -->
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/title_wishlist"
+                        android:textColor="#ffff" />
+
+
+                    <!-- Icon bên phải -->
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_profile" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:orientation="vertical"
+            android:textAlignment="center"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:background="#F2EDDA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkSelectAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/title_select_all"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:id="@+id/imgDeleteAll"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@drawable/ic_bin" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- ✅ Đã thay thế ListView bằng RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:listitem="@layout/item_wishlist_detail" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecommendations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:clipToPadding="false"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

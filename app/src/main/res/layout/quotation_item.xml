@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5sp"
+    android:background="#f4f4f4"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="89dp"
+        android:layout_height="126dp"
+        android:layout_marginEnd="12dp" />
+
+    <LinearLayout
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status Text"
+            android:textColor="#AA0000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trung Thành Duy Ái"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50.000 đ"
+            android:textColor="#C62828"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author: Nguyễn Nhật Ánh" />
+
+        <TextView
+            android:id="@+id/txtCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Condition: Like New" />
+
+        <TextView
+            android:id="@+id/txtPublisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publisher: NXB Trẻ" />
+
+        <TextView
+            android:id="@+id/txtNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note..." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0B7E43"
+            android:text="@string/title_accept"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnRefuse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#381319"
+            android:text="@string/title_refuse" />
+    </LinearLayout>
+
+</LinearLayout>

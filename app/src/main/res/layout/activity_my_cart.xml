@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MyCartActivity"
+    android:background="#F2EDDA">
+
+    <LinearLayout
+        android:id="@+id/layoutToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:background="#0A7B41">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="32dp">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="89dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    app:srcCompat="@drawable/ic_logo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp">
+
+                    <!-- Icon bên trái -->
+                    <ImageView
+                        android:id="@+id/btn_back"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+
+                        app:srcCompat="@drawable/ic_back" />
+
+                    <!-- View trống để đẩy icon bên phải về cuối -->
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_cart"
+                        android:textColor="#ffff"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"/>
+
+
+                    <!-- Icon bên phải -->
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_profile" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:orientation="vertical"
+            android:textAlignment="center"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:background="#F2EDDA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkSelectAll"
+                    android:layout_width="383dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/title_select_all"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:id="@+id/imgDeleteAll"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@drawable/ic_bin" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- ✅ Đã thay thế ListView bằng RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbar"
+        app:layout_constraintBottom_toTopOf="@id/checkoutLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_cart" />
+
+    <LinearLayout
+        android:id="@+id/checkoutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/title_type_voucher"
+            android:textSize="15dp"
+            android:layout_marginBottom="5dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/card_voucher"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/edtVoucher"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imgTick"
+                android:layout_width="24dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end|center_vertical"
+                app:srcCompat="@drawable/ic_tick" />
+
+        </FrameLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_subtotal"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <TextView
+                    android:id="@+id/txtSubtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd" />
+            </TableRow>
+
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="5dp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView45"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/poppins_semibold"-->
+<!--                    android:text="@string/title_shipping_fee" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txtShipFee"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textAlignment="textEnd" />-->
+<!--            </TableRow>-->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/title_voucher" />
+
+                <TextView
+                    android:id="@+id/txtVoucherInUse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd" />
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#CCCCCC"
+                android:layout_marginBottom="5dp"/>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/txtDiscountedPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/title_total_1" />
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:onClick="openCheckOutActivity"
+            android:id="@+id/btnCheckOut"
+            android:layout_width="211dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#0A7B41"
+            android:text="@string/title_go_to_checkout"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

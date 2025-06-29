@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#55000000" /> <!-- Shadow -->
+        </shape>
+    </item>
+
+    <item android:left="1dp" android:top="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- Nền trắng -->
+        </shape>
+    </item>
+</layer-list>

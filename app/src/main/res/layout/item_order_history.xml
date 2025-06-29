@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginTop="10dp"
+    android:backgroundTint="#C1DFD4"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvOrderId"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="#123456789"
+                android:textSize="14sp"
+                android:paddingStart="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:background="@drawable/bg_search_view"
+                android:padding="6dp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/poppins_semibold"-->
+<!--                    android:text="@string/title_delivery_status"-->
+<!--                    android:textColor="@color/green"-->
+<!--                    android:textSize="15sp" />-->
+
+                <TextView
+                    android:id="@+id/tvDeliveryStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To Receive"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:text="@string/title_expected_delivery"-->
+<!--                android:textColor="@color/green"-->
+<!--                android:textSize="15sp" />-->
+
+            <TextView
+                android:id="@+id/tvExpectedDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17 Feb, 2025"
+                android:textColor="@color/green"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_semibold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins_semibold"-->
+<!--                android:text="@string/title_total_amount"-->
+<!--                android:textColor="@color/green"-->
+<!--                android:textSize="15sp" />-->
+
+            <TextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="50.00 $"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_semibold"/>
+        </LinearLayout>
+
+<!--        <Button-->
+<!--            android:id="@+id/btnRate"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:backgroundTint="#007C53"-->
+<!--            android:fontFamily="@font/poppins_semibold"-->
+<!--            android:paddingHorizontal="16dp"-->
+<!--            android:paddingVertical="6dp"-->
+<!--            android:text="@string/btnRate"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:textSize="16dp"-->
+<!--            app:cornerRadius="20dp" />-->
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

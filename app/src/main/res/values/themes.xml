@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base theme -->
+    <style name="Base.Theme.Dyingapp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
+    </style>
+
+    <!-- This is the actual theme used in AndroidManifest.xml -->
+    <style name="Theme.Dyingapp" parent="Base.Theme.Dyingapp" />
+</resources>

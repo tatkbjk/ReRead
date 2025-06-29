@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/event"
+        android:title="Events"
+        android:icon="@drawable/nav_event_selector"/>
+    <item
+        android:id="@+id/sell"
+        android:title="Sell"
+        android:icon="@drawable/nav_sell_selector"/>
+    <item
+        android:id="@+id/wishList"
+        android:title="Wishlist"
+        android:icon="@drawable/nav_wishlist_selector"/>
+    <item
+        android:id="@+id/author"
+        android:title="Authors"
+        android:icon="@drawable/nav_author_selector"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile"/>
+</menu>
